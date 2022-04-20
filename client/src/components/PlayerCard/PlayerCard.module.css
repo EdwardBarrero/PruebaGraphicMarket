@@ -1,0 +1,19 @@
+.description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+}
+.description p{
+    text-align: center;
+}
+.card{
+    display: grid;
+    background-color: aqua;
+    width: 15%;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+}
+.card h5{
+    text-align: center;
+}

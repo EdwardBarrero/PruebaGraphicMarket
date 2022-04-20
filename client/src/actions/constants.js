@@ -1,0 +1,2 @@
+export const GET_ALL_TEAMS = "GET_ALL_TEAMS"
+export const GET_ALL_PLAYERS_TEAM = "GET_ALL_PLAYERS_TEAM"
