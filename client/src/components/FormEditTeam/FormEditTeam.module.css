@@ -1,0 +1,30 @@
+.form {
+  max-width: 40%;
+  min-height: 19vh;
+  border: 1px solid black;
+  box-shadow: 5px 5px 10px black;
+  margin: 1%;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1.5rem;
+  color: white;
+}
+.button{
+    width: 6em;
+    cursor: pointer;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    margin: 1em;
+    padding: 0.5em;
+}
+.input{
+    margin: 1em;
+    width: 10em;
+    height: 2em;
+}
+

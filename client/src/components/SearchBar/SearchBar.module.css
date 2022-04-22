@@ -1,0 +1,11 @@
+.buscadores{
+    margin-left: 1em;
+}
+.input{
+    padding-inline-start: 1em;
+    height: 2em;
+    margin: 0.3em;
+}
+.button{
+    height: 2.5em;
+}

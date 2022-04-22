@@ -1,7 +1,7 @@
 .home{
     position: relative;
     left: 15%;
-    width: 85%;
+    width: 60em;
     z-index: 1;
     margin-top: 3% ;
 }
@@ -11,6 +11,15 @@
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+.container{
+    display: flex;
+}
+.players{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
 }
 
  

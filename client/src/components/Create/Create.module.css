@@ -1,0 +1,25 @@
+.container{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+    margin-top: 5em;
+}
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.team{
+    width: 50em;
+    background-color: #c2c2c2;
+    display: grid;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.team h3{
+    cursor: pointer;
+    text-align: center;
+}

@@ -8,12 +8,20 @@
 }
 .card{
     display: grid;
-    background-color: aqua;
-    width: 15%;
+    backdrop-filter: blur(5px);
+    border: 1px solid black;
+    width: 15vw;
+    height: 30vh;
     align-items: center;
     justify-content: center;
-    margin: 1%;
+    margin: 1em;
 }
 .card h5{
     text-align: center;
+}
+.noName{
+    visibility: hidden;
+}
+.container{
+    z-index: 3;
 }
