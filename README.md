@@ -19,6 +19,7 @@ Aclaraciones: Para poder ejecutar esta app debes tener instalado en tu equipo po
   <li>DB_PASSWORD= YOUR_DB_PASSWORD</li>
   <li>DB_HOST= localhost</li>
   </ul>
+  
 4. Desde la terminal de SQL ejecutamos el comando "CREATE DATABASE soccer;"
 5. Ejecutamos "npm start", en algunos casos saltan errores al conectarse con la base de datos, para ello ejecutaremos el comando "$env:OPENSSL_CONF = ''"
   en nuestra consola y volvemos a ejecutar "npm start"
