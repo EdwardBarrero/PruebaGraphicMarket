@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const { Team, Player } = require("../db.js");
 const router = Router();
+const {Op} = require("sequelize")
 
 router.get("/", async (req, res, next) => {
   try {
@@ -12,6 +13,24 @@ router.get("/", async (req, res, next) => {
     next(error);
   }
 });
+
+router.get("/search", async (req, res, next) => {
+  let {name} = req.query
+  try {
+    name = name.toLowerCase().replace(/ /g, "_");
+    let team = await Team.findAll({
+      include: Player,
+      where: {
+        slug: {
+          [Op.substring]: name,
+        },
+      }
+    })
+    res.send(team)
+  } catch(error){
+    next(error)
+  }
+})
 
 router.get("/:id", async (req, res, next) => {
   const { id } = req.params;
@@ -27,7 +46,7 @@ router.get("/:id", async (req, res, next) => {
 
 router.post("/", (req, res, next) => {
   const { name, league, country } = req.body;
-  let slug = name.toLowerCase();
+  let slug = name.toLowerCase().replace(/ /g, "_");
   Team.create({
     name,
     slug,
@@ -52,8 +71,10 @@ router.post("/:teamId/player/:playerId", async (req, res, next) => {
 router.put("/:id", (req, res, next) => {
   const { id } = req.params;
   const { name, league, country } = req.body;
+  let slug;
+  if(name) slug=name.toLowerCase().replace(/ /g, "_");
   Team.update(
-    { name, league, country },
+    { name, slug, league, country },
     {
       where: {
         id,
